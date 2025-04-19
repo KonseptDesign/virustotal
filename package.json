@@ -32,6 +32,6 @@
     "run:ci": "pnpm build && pnpm test",
     "test": "vitest run",
     "prettier": "prettier --write .",
-    "local-release": "pnpm ci && changeset version && changeset publish"
+    "local-release": "pnpm run:ci && changeset version && changeset publish"
   }
 }
