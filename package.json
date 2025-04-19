@@ -1,0 +1,37 @@
+{
+  "name": "@konseptdesign/virustotal",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "virustotal",
+    "api",
+    "v3"
+  ],
+  "homepage": "https://github.com/KonseptDesign/virustotal",
+  "bugs": {
+    "url": "https://github.com/KonseptDesign/virustotal/issues"
+  },
+  "author": "Alex Marinov <alex@konsept.design> (https://konsept.design)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KonseptDesign/virustotal.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "run:ci": "pnpm build && pnpm test",
+    "test": "vitest run",
+    "prettier": "prettier --write .",
+    "local-release": "pnpm ci && changeset version && changeset publish"
+  }
+}
