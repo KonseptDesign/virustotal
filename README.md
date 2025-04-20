@@ -18,9 +18,15 @@ pnpm add @konseptdesign/virustotal
 ## Usage
 
 ```typescript
-import { /* functions */ } from '@konseptdesign/virustotal';
+import VirusTotal from '@konseptdesign/virustotal';
 
 // Example usage will be added as the library develops
+
+const vt = new VirusTotal('YOUR_API_KEY');
+
+vt.info('127.0.0.1').then((res) => {
+  console.log(res);
+});
 ```
 
 ## Features
