@@ -20,20 +20,31 @@ pnpm add @konseptdesign/virustotal
 ```typescript
 import VirusTotal from '@konseptdesign/virustotal';
 
-// Example usage will be added as the library develops
-
+// Initialize with your API key
 const vt = new VirusTotal('YOUR_API_KEY');
 
-vt.info('127.0.0.1').then((res) => {
-  console.log(res);
-});
+// Method 1: Scan a URL and get the analysis ID
+const scanResponse = await vt.scanUrl({ url: 'https://example.com' });
+const analysisId = scanResponse.data.id;
+console.log(`Analysis ID: ${analysisId}`);
+
+// Method 2: Get analysis results for a specific analysis ID
+const analysis = await vt.getAnalysis(analysisId);
+console.log(`Status: ${analysis.data.attributes.status}`);
+console.log(`Harmless detections: ${analysis.data.attributes.stats.harmless}`);
+console.log(`Malicious detections: ${analysis.data.attributes.stats.malicious}`);
+
+// Method 3: Scan URL and wait for results (convenience method)
+const results = await vt.scanUrlAndWait('https://example.com');
+console.log(`Malicious detections: ${results.data.attributes.stats.malicious}`);
 ```
 
 ## Features
 
-- TypeScript support
+- TypeScript support with comprehensive type definitions
 - Modern ESM package
-- Comprehensive VirusTotal API v3 coverage (in development)
+- URL scanning and analysis
+- Polling mechanism to wait for analysis completion
 
 ## Development
 
