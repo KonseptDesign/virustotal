@@ -1,5 +1,10 @@
 # @konseptdesign/virustotal
 
+<a href="https://www.npmjs.com/package/@konseptdesign/virustotal"><img src="https://img.shields.io/npm/v/@konseptdesign/virustotal?label=latest" alt="npm version" /></a>
+<a href="https://github.com/KonseptDesign/virustotal/blob/main/LICENSE" rel="nofollow"><img src="https://img.shields.io/npm/l/@konseptdesign/virustotal" alt="license" /></a>
+<a href="https://github.com/KonseptDesign/virustotal/actions?query=branch%3Amain" rel="nofollow"><img src="https://github.com/KonseptDesign/virustotal/actions/workflows/main.yml/badge.svg?event=push&branch=main" alt="build status" /></a>
+<a href="https://github.com/KonseptDesign/virustotal" rel="nofollow"><img src="https://img.shields.io/github/stars/KonseptDesign/virustotal" alt="stars"></a>
+
 A TypeScript client for the VirusTotal API v3.
 
 ## Installation
